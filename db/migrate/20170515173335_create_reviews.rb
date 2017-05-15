@@ -1,10 +1,9 @@
 class CreateReviews < ActiveRecord::Migration[5.1]
   def change
     create_table :reviews do |t|
-      t.string :title
-      t.text :body
+      t.string :username
       t.integer :rating
-      t.string :submitted_by
+      t.text :body
 
       t.timestamps
     end

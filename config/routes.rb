@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  resources :reviews
-  get 'about', to: 'pages#about'
 
   resources :recommendations
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-root to: 'pages#home'
+
+    get 'recommendations/:id/reviews', to: 'recommendations#reviews'
+    get 'recommendations/:id/reviews/create', to: 'recommendations#reviews#create'
+    get 'recommendations/:id/reviews/new', to: 'recommendations#reviews#new'
+    get 'recommendations/:id/reviews/edit', to: 'recommendations#reviews#edit'
+    get 'recommendations/:id/reviews/update', to: 'recommendations#reviews#update'
+    get 'recommendations/:id/reviews/destroy', to: 'recommendations#reviews#destroy'
+
+
+  root to: 'pages#home'
 end
