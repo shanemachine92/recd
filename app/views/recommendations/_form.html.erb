@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :fandom %>
+    <%= form.text_field :fandom, id: :recommendation_fandom %>
+  </div>
+
+  <div class="field">
     <%= form.label :summary %>
     <%= form.text_area :summary, id: :recommendation_summary %>
   </div>
