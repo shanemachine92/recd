@@ -64,7 +64,7 @@ class RecommendationsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recommendation
-      @recommendation = Recommendation.find(params[:id])
+      @recommendation = Recommendation.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
