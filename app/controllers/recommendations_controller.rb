@@ -6,6 +6,10 @@ class RecommendationsController < ApplicationController
     @recommendations = Recommendation.all
   end
 
+  def OUAT
+    @OUAT_recommendations = Recommendation.OUAT
+  end
+
   # GET /recommendations/1
   def show
   end

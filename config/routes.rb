@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :recommendations
-
+    get 'OUAT-fics', to: "recommendations#OUAT"
     get 'recommendations/:id/reviews', to: 'recommendations#reviews'
     get 'recommendations/:id/reviews/create', to: 'recommendations#reviews#create'
     get 'recommendations/:id/reviews/new', to: 'recommendations#reviews#new'
