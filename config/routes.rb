@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   get 'about', to: 'pages#about'
 
   resources :recommendations
