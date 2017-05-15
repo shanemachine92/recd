@@ -1,0 +1,7 @@
+<h1>All my Friends </h1>
+
+<% @friends.each do |friend| %>
+  <p><%= friend.username %></p>
+  <%= image_tag friend.profile_pic %>
+  <p><%= friend.country %></p>
+<% end %>
