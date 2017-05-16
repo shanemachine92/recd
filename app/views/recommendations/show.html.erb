@@ -6,8 +6,10 @@
 </p>
 
 <p>
-  <strong>Fandom:</strong>
-  <%= @recommendation.fandom %>
+  <strong>Fandoms:</strong>
+  <% @recommendation.fandoms.each do |fandom| %>
+  <%= fandom.name %>
+  <% end %>
 </p>
 
 <p>
