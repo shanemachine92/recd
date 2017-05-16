@@ -41,9 +41,6 @@ puts "2 special recs created"
     )
 end
 
-puts "6 reviews created"
-
-
 1.times do |review|
   Review.create!(
     username: "isabela",
@@ -53,4 +50,13 @@ puts "6 reviews created"
     )
 end
 
-puts "1 special review created"
+puts "7 reviews created"
+
+3.times do |fandom|
+Recommendation.last.fandoms.create!(
+  name: "OUAT"
+  )
+end
+
+puts "3 fandoms created"
+

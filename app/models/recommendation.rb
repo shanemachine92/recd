@@ -2,9 +2,12 @@ class Recommendation < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  validates_presence_of :title, :summary
+  has_many :reviews 
+  has_many :fandoms
+  accepts_nested_attributes_for :fandoms, 
+                                reject_if: lambda { |attrs| attrs['name'].blank? }
 
-  has_many :reviews
+  validates_presence_of :title, :summary
 
   def self.fantasy
     where(genre: "fantasy")
