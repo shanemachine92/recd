@@ -4,6 +4,7 @@ class Recommendation < ApplicationRecord
 
   has_many :reviews 
   has_many :fandoms
+  
   accepts_nested_attributes_for :fandoms, 
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
 

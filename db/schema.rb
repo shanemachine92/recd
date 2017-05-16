@@ -10,17 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170516124253) do
+ActiveRecord::Schema.define(version: 20170516180431) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "fandoms", force: :cascade do |t|
     t.string "name"
-    t.bigint "recommendation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["recommendation_id"], name: "index_fandoms_on_recommendation_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -43,13 +41,14 @@ ActiveRecord::Schema.define(version: 20170516124253) do
     t.string "length"
     t.string "rating"
     t.boolean "complete"
-    t.string "recommended_by"
     t.text "recommender_review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "fandom"
     t.string "slug"
-    t.string "fandom_id"
+    t.bigint "fandom_id"
+    t.string "username"
+    t.index ["fandom_id"], name: "index_recommendations_on_fandom_id"
     t.index ["slug"], name: "index_recommendations_on_slug", unique: true
   end
 
@@ -72,6 +71,6 @@ ActiveRecord::Schema.define(version: 20170516124253) do
     t.string "password"
   end
 
-  add_foreign_key "fandoms", "recommendations"
+  add_foreign_key "recommendations", "fandoms"
   add_foreign_key "reviews", "recommendations"
 end
