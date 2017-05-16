@@ -1,4 +1,3 @@
-
 6.times do |rec|
   Recommendation.create!(
     username: "shane",
