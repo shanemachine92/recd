@@ -17,10 +17,7 @@ class RecommendationsController < ApplicationController
   # GET /recommendations/new
   def new
     @recommendation = Recommendation.new
-    3.times { @recommendation.fandoms.build }
   end
-
-
 
   # GET /recommendations/1/edit
   def edit
@@ -29,7 +26,7 @@ class RecommendationsController < ApplicationController
   # POST /recommendations
   def create
     @recommendation = Recommendation.new(params.require(:recommendation).permit(:title, :summary, :author, :genre, :length, :rating, :complete, 
-      :recommended_by, :recommender_review, :fandom, :slug, :fandom_id, fandoms_attributes: [:name]))
+     :recommender_review, :fandom, :slug, :fandom_id, fandoms_attributes: [:name]))
 
     respond_to do |format|
       if @recommendation.save

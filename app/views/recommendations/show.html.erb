@@ -1,15 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Recommended by:</strong>
+  <%= @recommendation.username %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @recommendation.title %>
 </p>
 
 <p>
   <strong>Fandoms:</strong>
-  <% @recommendation.fandoms.each do |fandom| %>
-  <%= fandom.name %>
-  <% end %>
+  <%= @recommendation.fandom %>
 </p>
 
 <p>
@@ -40,11 +43,6 @@
 <p>
   <strong>Complete:</strong>
   <%= @recommendation.complete %>
-</p>
-
-<p>
-  <strong>Recommended by:</strong>
-  <%= @recommendation.recommended_by %>
 </p>
 
 <p>
