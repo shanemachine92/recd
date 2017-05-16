@@ -16,10 +16,14 @@
     <%= form.text_field :title, id: :recommendation_title %>
   </div>
 
-  <div class="field">
-    <%= form.label :fandom %>
-    <%= form.text_field :fandom, id: :recommendation_fandom %>
-  </div>
+  <ul>
+    <%= form.fields_for :fandoms do |fandom_form| %>
+    <li>
+      <%= fandom_form.label :name %>
+      <%= fandom_form.text_field :name %>
+    </li>
+    <% end %>
+  </ul>
 
   <div class="field">
     <%= form.label :summary %>

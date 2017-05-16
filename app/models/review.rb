@@ -1,3 +1,6 @@
 class Review < ApplicationRecord
-  enum status: { draft: 0, published: 1 }
+  validates_presence_of :rating, :body
+
+  belongs_to :recommendation
+
 end
