@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  
   resources :recommendations
     get 'OUAT-fics', to: "recommendations#OUAT"
     get 'recommendations/:id/reviews', to: 'recommendations#reviews'

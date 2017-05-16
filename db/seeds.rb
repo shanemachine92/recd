@@ -1,30 +1,4 @@
 
-1.times do |user|
-User.create!(
-  username: "shane",
-  password: "password"
-  )
-end
-puts "user Shane created"
-
-1.times do |user|
-User.create!(
-  username: "isabela",
-  password: "password"
-  )
-end
-
-puts "user Isabela created"
-
-1.times do |user|
-User.create!(
-  username: "Hawke",
-  password: "password"
-  )
-end
-
-puts "user Hawke created"
-
 6.times do |rec|
   Recommendation.create!(
     username: "shane",
