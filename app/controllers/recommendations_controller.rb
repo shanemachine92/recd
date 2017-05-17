@@ -25,8 +25,7 @@ class RecommendationsController < ApplicationController
 
   # POST /recommendations
   def create
-    @recommendation = Recommendation.new(params.require(:recommendation).permit(:title, :summary, :author, :genre, :length, :rating, :complete, 
-     :recommender_review, :fandom, :slug, :fandom_id, fandoms_attributes: [:name]))
+    @recommendation = Recommendation.new(recommendation_params)
 
     respond_to do |format|
       if @recommendation.save
@@ -63,7 +62,21 @@ class RecommendationsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def recommendation_params
-      params.require(:recommendation).permit(:title, :summary, :author, :genre, :length, :rating, :complete, :recommended_by, :recommender_review)
-    end
+   
+    private
+
+  def recommendation_params
+    params.require(:recommendation).permit(:title,
+                                          :summary, 
+                                          :author, 
+                                          :genre, 
+                                          :length, 
+                                          :rating, 
+                                          :complete, 
+                                          :recommender_review, 
+                                          :fandom, 
+                                          :fandom_id, 
+                                          fandoms_attributes: [:name]
+                                          )
+  end
 end
