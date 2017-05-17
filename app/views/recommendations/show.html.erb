@@ -7,7 +7,7 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @recommendation.title %>
+  <%= link_to @recommendation.title, 'http://#{recommendation.url}', target: :_blank %>
 </p>
 
 <p>
