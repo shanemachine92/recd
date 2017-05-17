@@ -55,21 +55,6 @@ class RecommendationsController < ApplicationController
       format.html { redirect_to recommendations_url, notice: 'Recommendation was successfully deleted.' }
     end
   end
-
-
-  def new_review
-    @review = Review.new
-  end
-
-  def edit_review
-  end
-
-  def create_review
-  end
-
-  def update_review
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recommendation

@@ -1,9 +1,8 @@
 class PagesController < ApplicationController
   def home
-    @fics = Recommendation.all
   end
 
-  def fandom
+  def fandoms
     @fandoms = Fandom.all
   end
 
