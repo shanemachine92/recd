@@ -1,8 +1,8 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_recommendation, only: [:show, :edit, :update, :destroy]
 
   def new
-    @reviews = Review.all
+    @review = Review.new
     @page_title = "New Review"
   end
 
@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
      respond_to do |format|
         if @review.save
-          format.html { redirect_to @review, notice: 'Review was successfully created.' }
+          format.html { redirect_to @reccomentation, notice: 'Review was successfully created.' }
         else
           format.html { render :new }
         end
@@ -37,7 +37,7 @@ class ReviewsController < ApplicationController
  private
     # Use callbacks to share common setup or constraints between actions.
     def set_review
-      @review = Review.find(params[:id])
+      @review = Review.find(params[:recommendation_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

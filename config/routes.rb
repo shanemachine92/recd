@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'OUAT-fics', to: "recommendations#OUAT"
 
-  # get 'recommendations/:id/reviews', to: 'reviews#show'
+  get 'recommendations/:id/reviews', to: 'reccomendations#show', as: 'reviews'
   get 'recommendations/:id/reviews/create', to: 'reviews#create', as: 'create_review'
   get 'recommendations/:id/reviews/new', to: 'reviews#new', as: 'new_review'
   get 'recommendations/:id/reviews/edit', to: 'reviews#edit', as: 'edit_review'
