@@ -58,6 +58,7 @@
 
   <h2> Reviews for <%= @recommendation.title %> </h2>
 
+  <div id = "reviews" data-recommendation-id="<%=@recommendation.id%>">
   <%= render @recommendation.reviews %>
- 
+  </div>
 </div>
