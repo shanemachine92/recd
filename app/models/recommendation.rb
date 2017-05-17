@@ -2,7 +2,8 @@ class Recommendation < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  has_many :reviews 
+  belongs_to :user
+  has_many :reviews, dependent: :destroy
   has_many :fandoms
   
   accepts_nested_attributes_for :fandoms, 
