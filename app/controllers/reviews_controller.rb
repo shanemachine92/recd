@@ -3,9 +3,11 @@ class ReviewsController < ApplicationController
 
   def new
     @reviews = Review.all
+    @page_title = "New Review"
   end
 
   def edit
+     @page_title = "Edit Review"
   end
 
   def create

@@ -4,23 +4,23 @@ class RecommendationsController < ApplicationController
   # GET /recommendations
   def index
     @recommendations = Recommendation.all
-  end
-
-  def OUAT
-    @OUAT_recommendations = Recommendation.OUAT
+    @page_title = "All Recommended Fics| Curated Fanfiction"
   end
 
   # GET /recommendations/1
   def show
+    @page_title = @recommendation.title
   end
 
   # GET /recommendations/new
   def new
     @recommendation = Recommendation.new
+    @page_title = "Add New Rec"
   end
 
   # GET /recommendations/1/edit
   def edit
+     @page_title = "Edit Rec"
   end
 
   # POST /recommendations
