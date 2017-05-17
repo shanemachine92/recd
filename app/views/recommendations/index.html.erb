@@ -16,22 +16,9 @@
       <p>Recommended by</p>
     </div>
 
-  <div>
-    <% @recommendations.each do |recommendation| %>
-        <p><%= link_to recommendation.title, recommendation_path(recommendation) %></p>
-        <p><%= recommendation.fandom %></p>
-        <p><%= recommendation.summary %></p>
-        <p><%= recommendation.author %></p>
-        <p><%= recommendation.genre %></p>
-        <p><%= recommendation.length %></p>
-        <p><%= recommendation.rating %></p>
-        <p><%= recommendation.complete %></p>
-        <p><%= recommendation.username %></p>
-        <p><%= link_to 'Edit', edit_recommendation_path(recommendation) %></p>
-        <p><%= link_to 'Delete', recommendation, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    <% end %>
-  </div>
-</table>
+<div>
+  <%= render @recommendations %>
+</div>
 
 <br>
 
