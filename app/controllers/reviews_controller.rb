@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   def create
-    @review = current_user_reviews.build(review_params)
+    @review = current_user.reviews.build(review_params)
   end
 
   private
