@@ -1,5 +1,6 @@
 class RecommendationsController < ApplicationController
   before_action :set_recommendation, only: [:show, :edit, :update, :destroy]
+  layout "recommendation"
 
   # GET /recommendations
   def index
@@ -53,6 +54,20 @@ class RecommendationsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to recommendations_url, notice: 'Recommendation was successfully deleted.' }
     end
+  end
+
+
+  def new_review
+    @review = Review.new
+  end
+
+  def edit_review
+  end
+
+  def create_review
+  end
+
+  def update_review
   end
 
   private

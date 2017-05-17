@@ -1,10 +1,10 @@
-<%= form_with(model: recommendation, local: true) do |form| %>
-  <% if recommendation.errors.any? %>
+<%= form_with(model: review, local: true) do |form| %>
+  <% if review.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(recommendation.errors.count, "error") %> prohibited this recommendation from being saved:</h2>
+      <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
 
       <ul>
-      <% recommendation.errors.full_messages.each do |message| %>
+      <% review.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,53 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :recommendation_title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fandom %>
-    <%= form.text_field :fandom, id: :recommendation_fandom %>
-  </div>
-
-  <div class="field">
-    <%= form.label :summary %>
-    <%= form.text_area :summary, id: :recommendation_summary %>
-  </div>
-
-  <div class="field">
-    <%= form.label :author %>
-    <%= form.text_field :author, id: :recommendation_author %>
-  </div>
-
-  <div class="field">
-    <%= form.label :genre %>
-    <%= form.text_field :genre, id: :recommendation_genre %>
-  </div>
-
-  <div class="field">
-    <%= form.label :length %>
-    <%= form.text_field :length, id: :recommendation_length %>
+    <%= form.label :username %>
+    <%= form.text_field :username, id: :review_username %>
   </div>
 
   <div class="field">
     <%= form.label :rating %>
-    <%= form.text_field :rating, id: :recommendation_rating %>
+    <%= form.number_field :rating, id: :review_rating %>
   </div>
 
   <div class="field">
-    <%= form.label :complete %>
-    <%= form.check_box :complete, id: :recommendation_complete %>
-  </div>
-
-  <div class="field">
-    <%= form.label :recommended_by %>
-    <%= form.text_field :recommended_by, id: :recommendation_recommended_by %>
-  </div>
-
-  <div class="field">
-    <%= form.label :recommender_review %>
-    <%= form.text_area :recommender_review, id: :recommendation_recommender_review %>
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :review_body %>
   </div>
 
   <div class="actions">
