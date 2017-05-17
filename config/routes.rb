@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   resources :recommendations
 
 
-  get 'about', to: "pages#about"
-  get 'contact', to: "pages#contact"
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+  get 'fandoms', to: 'pages#fandoms'
 
   get 'OUAT-fics', to: "recommendations#OUAT"
 
