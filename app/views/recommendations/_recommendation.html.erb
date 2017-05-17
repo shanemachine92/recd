@@ -10,6 +10,6 @@
         <p><%= recommendation.rating %></p>
         <p><%= recommendation.complete %></p>
         <p><%= recommendation.username %></p>
-        <p><%= link_to 'Edit', edit_recommendation_path(recommendation) %></p>
-        <p><%= link_to 'Delete', recommendation, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to 'Edit', edit_recommendation_path(recommendation) if logged_in?(:site_admin) %></p>
+        <p><%= link_to 'Delete', recommendation, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></p>
 </div>

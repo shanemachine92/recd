@@ -15,7 +15,5 @@ Rails.application.routes.draw do
 
   get 'OUAT-fics', to: "recommendations#OUAT"
 
- 
-
   root to: 'pages#home'
 end

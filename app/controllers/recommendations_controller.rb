@@ -1,6 +1,7 @@
 class RecommendationsController < ApplicationController
   before_action :set_recommendation, only: [:show, :edit, :update, :destroy]
   layout "recommendation"
+  access all: [:show, :index], user: {except: [:destroy]}, company_admin: :all
 
   # GET /recommendations
   def index

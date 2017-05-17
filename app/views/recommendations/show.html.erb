@@ -50,9 +50,8 @@
   <%= @recommendation.recommender_review %>
 </p>
 
-<%= link_to 'Edit', edit_recommendation_path(@recommendation) %> |
+<%= link_to 'Edit', edit_recommendation_path(@recommendation) if logged_in?(:site_admin) %> 
 <%= link_to 'Back', recommendations_path %>
-<%= link_to 'Add A New Review', new_review_path%>
 
 <h2> Reviews for <%= @recommendation.title %> </h2>
 
