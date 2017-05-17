@@ -1,59 +1,71 @@
-<p id="notice"><%= notice %></p>
+<div class ="col-sm-8 recs-main">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Recommended by:</strong>
-  <%= @recommendation.username %>
-</p>
+  <p>
+    <strong>Recommended by:</strong>
+    <%= @recommendation.username %>
+  </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @recommendation.title %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @recommendation.title %>
+  </p>
 
-<p>
-  <strong>Fandoms:</strong>
-  <%= @recommendation.fandom %>
-</p>
+  <p>
+    <strong>Fandoms:</strong>
+    <%= @recommendation.fandom %>
+  </p>
 
-<p>
-  <strong>Summary:</strong>
-  <%= @recommendation.summary %>
-</p>
+  <p>
+    <strong>Summary:</strong>
+    <%= @recommendation.summary %>
+  </p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @recommendation.author %>
-</p>
+  <p>
+    <strong>Author:</strong>
+    <%= @recommendation.author %>
+  </p>
 
-<p>
-  <strong>Genre:</strong>
-  <%= @recommendation.genre %>
-</p>
+  <p>
+    <strong>Genre:</strong>
+    <%= @recommendation.genre %>
+  </p>
 
-<p>
-  <strong>Length:</strong>
-  <%= @recommendation.length %>
-</p>
+  <p>
+    <strong>Length:</strong>
+    <%= @recommendation.length %>
+  </p>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @recommendation.rating %>
-</p>
+  <p>
+    <strong>Rating:</strong>
+    <%= @recommendation.rating %>
+  </p>
 
-<p>
-  <strong>Complete:</strong>
-  <%= @recommendation.complete %>
-</p>
+  <p>
+    <strong>Complete:</strong>
+    <%= @recommendation.complete %>
+  </p>
 
-<p>
-  <strong>Recommender review:</strong>
-  <%= @recommendation.recommender_review %>
-</p>
+  <p>
+    <strong>Recommender review:</strong>
+    <%= @recommendation.recommender_review %>
+  </p>
 
-<%= link_to 'Edit', edit_recommendation_path(@recommendation) if logged_in?(:site_admin) %> 
-<%= link_to 'Back', recommendations_path %>
+  <%= link_to 'Edit', edit_recommendation_path(@recommendation) if logged_in?(:site_admin) %> 
+  <%= link_to 'Back', recommendations_path %>
 
-<h2> Reviews for <%= @recommendation.title %> </h2>
+  <% unless current_user.is_a? GuestUser %>
+    <%= form_for @review, url: '#' do |form| %>
+      <div class="form-group">
+      <%= form.label :body %>
+      <%= form.text_area :body, class: "form-control" %>
+      </div>
+      <%= form.submit 'Post Review', class: "btn btn-primary" %>
+      <% end %>
+  <% end %>
 
+  <h2> Reviews for <%= @recommendation.title %> </h2>
 
-
+  <%= render @recommendation.reviews %>
+ 
+</div>
