@@ -1,6 +1,10 @@
 class ReviewsController < ApplicationController
   before_action :set_recommendation, only: [:show, :edit, :update, :destroy]
 
+  def show
+    redirect_to @reccomendation.show
+  end
+  
   def new
     @review = Review.new
     @page_title = "New Review"
