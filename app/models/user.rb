@@ -13,8 +13,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # has_many :recommendations
-  # has_many :reviews
+  has_many :recommendations
+  has_many :reviews
 
   validates_presence_of :name
 
