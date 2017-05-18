@@ -7,13 +7,8 @@ Rails.application.routes.draw do
     # get 'reviews', to: 'reviews#create', via: [:post]
   end
 
-
-
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
-  get 'fandoms', to: 'pages#fandoms'
-
-  get 'OUAT-fics', to: "recommendations#OUAT"
 
   root to: 'pages#home'
 end

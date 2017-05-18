@@ -2,7 +2,6 @@
   Recommendation.create!(
     username: "shane",
     title: "My rec #{rec}",
-    fandom: "OUAT",
     summary: "some stuff happens and it is wild!",
     author: "shane",
     genre:"horror",
@@ -19,7 +18,6 @@ puts "6 recs created"
   Recommendation.create!(
     username: "bri",
     title: "My rec #{rec}",
-    fandom: "Buffy",
     summary: "some stuff happens and it is wild!",
     author: "isabela",
     genre:"fantasy",
