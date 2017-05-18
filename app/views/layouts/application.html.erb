@@ -14,22 +14,19 @@
   <body>
 
     <div class="site-wrapper">
-
       <div class="site-wrapper-inner">
-
         <div class="cover-container">
-
           <%= render "shared/application_nav"%>
-
-          <%= login_helper %>
 
           <%= yield %>
 
+          <%= render "shared/application_footer"%>
         </div>
-
       </div>
-
     </div>
+
+  
+
   </body>
 </html>
 

@@ -20,4 +20,8 @@ class Recommendation < ApplicationRecord
 
   scope :completed_fic, -> {where(complete: true)}
 
+  # RATINGS = [
+  #   'K', 'K+', 'T', 'M', 'MA'
+  # ]
+
 end
