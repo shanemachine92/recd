@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170517222225) do
-=======
-ActiveRecord::Schema.define(version: 20170517151805) do
->>>>>>> reviews_with_actionable
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,17 +54,20 @@ ActiveRecord::Schema.define(version: 20170517151805) do
     t.text "summary"
     t.string "author"
     t.string "genre"
-    t.string "length"
     t.string "rating"
     t.boolean "complete"
     t.text "recommender_review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "fandom"
     t.string "slug"
     t.bigint "fandom_id"
-    t.string "username"
     t.string "url"
+    t.integer "words"
+    t.integer "chapters"
+    t.string "recommended_by"
+    t.string "language"
+    t.string "pairings"
+    t.string "rated"
     t.index ["fandom_id"], name: "index_recommendations_on_fandom_id"
     t.index ["slug"], name: "index_recommendations_on_slug", unique: true
   end
@@ -104,10 +103,7 @@ ActiveRecord::Schema.define(version: 20170517151805) do
 
   add_foreign_key "comments", "recommendations"
   add_foreign_key "comments", "users"
-<<<<<<< HEAD
   add_foreign_key "genres", "recommendations"
-=======
->>>>>>> reviews_with_actionable
   add_foreign_key "recommendations", "fandoms"
   add_foreign_key "reviews", "recommendations"
   add_foreign_key "reviews", "users"

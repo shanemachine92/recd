@@ -9,23 +9,23 @@
       <p class="card-text">Summary: <%= recommendation.summary %></p>
     </div>
     <div class="card-footer text-muted">
-      <p>Recommended by <span class = "reccomender-name"> <%= recommendation.username %> </span></p>
+      <p>Recommended by <span class = "reccomender-name"> <%= current_user.name %> </span></p>
 
       <div class = "row">
         <div class = "col-sm-2">
-          Rated:
+          Rated: <%= recommendation.rated %>
         </div>
         <div class = "col-sm-2">
-          Language:
+          Language: <%= recommendation.language %>
         </div>
         <div class = "col-sm-2">
           Genre: <%= recommendation.genre %>
         </div>
         <div class = "col-sm-2">
-          Chapters:
+          Chapters: <%= recommendation.chapters %>
         </div>
         <div class = "col-sm-2">
-          Words: <%= recommendation.length %>
+          Words: <%= recommendation.words %>
         </div>
         <div class = "col-sm-2">
           Completed: <%= recommendation.complete %>
