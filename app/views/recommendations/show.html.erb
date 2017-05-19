@@ -1,6 +1,9 @@
-<p id="notice"><%= notice %></p>
 
-<%= render @recommendation %>
+<%= link_to "http://www.facebook.com/mypage", target: :_blank do %>
+   <div>
+   <%= render @recommendation %> 
+   </div>   
+<% end %> 
 
 <%= link_to 'Edit', edit_recommendation_path(@recommendation) if logged_in?(:site_admin) %> 
 <%= link_to 'Back', recommendations_path %>
