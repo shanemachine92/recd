@@ -12,6 +12,8 @@ class RecommendationsController < ApplicationController
   # GET /recommendations/1
   def show
     @page_title = @recommendation.title
+    @recommendation = Recommendation.includes(:reviews).friendly.find(params[:id])
+    @review = Review.new
   end
 
   # GET /recommendations/new

@@ -5,10 +5,14 @@
    </div>   
 <% end %> 
 
-<%= link_to 'Edit', edit_recommendation_path(@recommendation) if logged_in?(:site_admin) %> 
-<%= link_to 'Back', recommendations_path %>
+  <%= link_to 'Edit', edit_recommendation_path(@recommendation) if logged_in?(:site_admin) %> 
+  <%= link_to 'Back', recommendations_path %>
 
-<h2> Reviews for <%= @recommendation.title %> </h2>
+  <%= render 'reviews/review_form' %>
 
+  <h2> Reviews for <%= @recommendation.title %> </h2>
 
-
+  <div id = "reviews" data-recommendation-id= "<%=@recommendation.id%>" >
+  <%= render @recommendation.reviews %>
+  </div>
+</div>

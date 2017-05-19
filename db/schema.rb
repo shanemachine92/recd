@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170517222225) do
+=======
+ActiveRecord::Schema.define(version: 20170517151805) do
+>>>>>>> reviews_with_actionable
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,7 +104,10 @@ ActiveRecord::Schema.define(version: 20170517222225) do
 
   add_foreign_key "comments", "recommendations"
   add_foreign_key "comments", "users"
+<<<<<<< HEAD
   add_foreign_key "genres", "recommendations"
+=======
+>>>>>>> reviews_with_actionable
   add_foreign_key "recommendations", "fandoms"
   add_foreign_key "reviews", "recommendations"
   add_foreign_key "reviews", "users"
