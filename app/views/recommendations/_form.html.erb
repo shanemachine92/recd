@@ -1,19 +1,7 @@
 <div class = "container">
   <div class="card">
     <div class="card-block">
-      <%= form_with(model: recommendation, local: true) do |form| %>
-        <% if recommendation.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(recommendation.errors.count, "error") %> prohibited this recommendation from being saved:</h2>
-
-            <ul>
-            <% recommendation.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
-
+      <%= form_for @recommendation do |form| %>
         <div class="form-group">
           <%= form.label :title %>
           <%= form.text_field :title, id: :recommendation_title, class: "form-control" %>
@@ -24,14 +12,14 @@
           <%= form.text_field :url, id: :recommendation_url, class: "form-control" %>
         </div>
 
-          <div class="form-group">
+        <div class="form-group">
           <%= form.label :author %>
           <%= form.text_field :author, id: :recommendation_author, class: "form-control" %>
         </div>
 
          <div class="form-group">
           <%= form.label :pairings %>
-          <%= form.text_field :oairings, id: :recommendation_pairing, class: "form-control" %>
+          <%= form.text_area :pairings, id: :recommendation_pairings, class: "form-control" %>
         </div>
 
 
@@ -40,75 +28,70 @@
           <%= form.text_area :summary, id: :recommendation_summary, class: "form-control" %>
         </div>
 
-        <div class= "form-group">
+        <div class= "form-group ">
           <%= form.label :rated %>
           <select class="custom-select">
-            <option selected></option>
-            <option value="1">K</option>
-            <option value="2">K+</option>
-            <option value="3">T</option>
-            <option value="4">M</option>
-            <option value="5">MA</option>
-          </select>
-        </div>
+           <option selected></option>
+           <option>K</option>
+           <option>K+</option>
+           <option>T</option>
+           <option>M</option>
+           <option>MA</option>
+         </select>
+       </div>
 
-         <div class= "form-group">
-          <%= form.label :language %>
-          <select class="custom-select">
-            <option selected></option>
-            <option value="1">Deutsch</option>
-            <option value="2">English</option>
-            <option value="3">Español</option>
-            <option value="4">Italiano</option>
-            <option value="5">Português</option>
-          </select>
+       <div class= "form-group ">
+        <%= form.label :language %>
+        <select class="custom-select">
+          <option selected></option>
+          <option>Deutsch</option>
+          <option>English</option>
+          <option>Español</option>
+          <option>Italiano</option>
+          <option>Português</option>
+        </select>
         </div>
 
         <div class= "form-group">
           <%= form.label :genre %>
           <select class="custom-select">
-            <option selected></option>
-            <option value="1">Adventure</option>
-            <option value="2">Angst</option>
-            <option value="3">Crime</option>
-            <option value="4">Drama</option>
-            <option value="5">Family</option>
-            <option value="6">Fantasy</option>
-            <option value="7">General</option>
-            <option value="8">Horror</option>
-            <option value="9">Humor</option>
-            <option value="10">Hurt/Comfort</option>
-            <option value="11">Mystery</option>
-            <option value="12">Parody</option>
-            <option value="13">Poetry</option>
-            <option value="14">Romance</option>
-            <option value="15">Sci-Fi</option>
-            <option value="16">Spiritual</option>
-            <option value="17">Supernatural</option>
-            <option value="18">Suspence</option>
-            <option value="19">Tragedy</option>
-            <option value="20">Western</option>
+            <option></option>
+            <option>Adventure</option>
+            <option>Angst</option>
+            <option>Crime</option>
+            <option>Drama</option>
+            <option>Family</option>
+            <option>Fantasy</option>
+            <option>General</option>
+            <option>Horror</option>
+            <option>Humor</option>
+            <option>Hurt/Comfort</option>
+            <option>Mystery</option>
+            <option>Parody</option>
+            <option>Poetry</option>
+            <option>Romance</option>
+            <option>Sci-Fi</option>
+            <option>Spiritual</option>
+            <option>Supernatural</option>
+            <option>Suspence</option>
+            <option>Tragedy</option>
+            <option>Western</option>
           </select>
         </div>
 
         <div class="form-group">
           <%= form.label :chapters %>
-          <%= form.number_field :chapters, id: :recommendation_chapters, class: "form-control" %>
+          <%= form.number_field :chapters, id: :recommendation_chapters %>
         </div>
 
         <div class="form-group">
           <%= form.label :words %>
-          <%= form.number_field :words, id: :recommendation_words, class: "form-control" %>
+          <%= form.number_field :words, id: :recommendation_words %>
         </div>
 
         <div class="form-group">
           <%= form.label :complete %>
-          <%= form.check_box :complete, id: :recommendation_complete, class: "form-control" %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label :recommender_review %>
-          <%= form.text_area :recommender_review, id: :recommendation_recommender_review, class: "form-control" %>
+          <%= form.check_box :complete, id: :recommendation_complete%>
         </div>
 
         <div class="actions">
@@ -117,4 +100,4 @@
       <% end %>
     </div> 
   </div>
- </div> 
+</div> 

@@ -15,22 +15,6 @@ ActiveRecord::Schema.define(version: 20170517222225) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "comments", force: :cascade do |t|
-    t.text "body"
-    t.bigint "user_id"
-    t.bigint "recommendation_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["recommendation_id"], name: "index_comments_on_recommendation_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-  create_table "fandoms", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -60,7 +44,6 @@ ActiveRecord::Schema.define(version: 20170517222225) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
-    t.bigint "fandom_id"
     t.string "url"
     t.integer "words"
     t.integer "chapters"
@@ -68,8 +51,9 @@ ActiveRecord::Schema.define(version: 20170517222225) do
     t.string "language"
     t.string "pairings"
     t.string "rated"
-    t.index ["fandom_id"], name: "index_recommendations_on_fandom_id"
+    t.bigint "user_id"
     t.index ["slug"], name: "index_recommendations_on_slug", unique: true
+    t.index ["user_id"], name: "index_recommendations_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -101,10 +85,7 @@ ActiveRecord::Schema.define(version: 20170517222225) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "comments", "recommendations"
-  add_foreign_key "comments", "users"
   add_foreign_key "genres", "recommendations"
-  add_foreign_key "recommendations", "fandoms"
   add_foreign_key "reviews", "recommendations"
   add_foreign_key "reviews", "users"
 end

@@ -13,8 +13,12 @@ a {
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  background-color: #fff;
-  border: .05rem solid #000;
+  background-color: #000;
+  border: .05rem solid #fff;
+}
+
+.btn-secondary > a {
+  color: #fff;
 }
 
 /*
@@ -24,7 +28,7 @@ a {
 html,
 body {
   height: 100%;
-  background-color: #fff;
+  background-color: #000;
 }
 body {
   color: #000;
@@ -57,16 +61,18 @@ body {
 
 .masthead {
   margin-bottom: 2rem;
+  olor: white;
 }
 
 .masthead-brand {
   margin-bottom: 0;
+  color: white;
 }
 
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: bold;
-  color: rgba(0, 0, 0,.5);
+  color: white;
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
@@ -100,7 +106,7 @@ body {
  */
 
 .mastfoot {
-  color: rgba(255,255,255,.5);
+  color: rgba(0, 0, 0,.5);
   margin-top: 20px;
 }
 
@@ -143,16 +149,23 @@ body {
 .card-block {
   color: black;
   text-align: left;
+  padding: 5px;
 }
 
 h1 {
   text-alighn: center;
   margin: 15px 0;
+  color: white;
+}
+
+.card-text {
+  margin: 0;
 }
 
 h2 {
   text-alighn: center;
   margin: 25px 0;
+  color: white;
 }
 
 .col-md-3 {
@@ -171,6 +184,13 @@ h2 {
 .card-footer {
   font-size: .8em;
   font-style: italic;
+  background-color: transparent; 
+  border: none;
+  padding: none;
+}
+
+.rec-card {
+  margin-top: 15px;
 }
 
 .reviewer-name,
@@ -185,4 +205,13 @@ h2 {
 .btn-primary{
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.card-subtitle{
+  font-size: 15px;
+}
+
+.card-header {
+  background-color: transparent; 
+  border: none;
 }

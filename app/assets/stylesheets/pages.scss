@@ -3,3 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import 'bootstrap';
+
+body {
+  background-image: image-url('wg_aged_surface_texture_1.jpg'); // link to /assets/images/wg_aged_surface_texture_1.jpg
+}
