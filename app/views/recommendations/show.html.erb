@@ -1,49 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Recommended by:</strong>
-  <%= @recommendation.username %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= link_to @recommendation.title, 'http://#{recommendation.url}', target: :_blank %>
-</p>
-
-<p>
-  <strong>Summary:</strong>
-  <%= @recommendation.summary %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @recommendation.author %>
-</p>
-
-<p>
-  <strong>Genre:</strong>
-  <%= @recommendation.genre %>
-</p>
-
-<p>
-  <strong>Length:</strong>
-  <%= @recommendation.length %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @recommendation.rating %>
-</p>
-
-<p>
-  <strong>Complete:</strong>
-  <%= @recommendation.complete %>
-</p>
-
-<p>
-  <strong>Recommender review:</strong>
-  <%= @recommendation.recommender_review %>
-</p>
+<%= render @recommendation %>
 
 <%= link_to 'Edit', edit_recommendation_path(@recommendation) if logged_in?(:site_admin) %> 
 <%= link_to 'Back', recommendations_path %>

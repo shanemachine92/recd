@@ -1,7 +1,8 @@
-<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Recommendation', new_recommendation_path if logged_in?(:site_admin, :user) %>
 
 <h1>Recommendations</h1>
 
-  <%= render partial: @recommendations, spacer_template: 'recommendation_ruler' %>
+<%= render partial: @recommendations %>
 
 

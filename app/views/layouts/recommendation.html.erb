@@ -15,11 +15,10 @@
 
   <%= render "shared/application_nav" %>
 
-  <%= link_to 'New Recommendation', new_recommendation_path if logged_in?(:site_admin, :user) %>
-
   <%= yield %>
 
   <%= render "shared/application_footer"%>
+
 
   </body>
 </html>
