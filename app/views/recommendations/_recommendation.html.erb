@@ -1,15 +1,43 @@
-<div>
-        <p>
-            <%= link_to recommendation.title, recommendation_path(recommendation) %>   
-        </p>
-        <p><%= recommendation.fandom %></p>
-        <p><%= recommendation.summary %></p>
-        <p><%= recommendation.author %></p>
-        <p><%= recommendation.genre %></p>
-        <p><%= recommendation.length %></p>
-        <p><%= recommendation.rating %></p>
-        <p><%= recommendation.complete %></p>
-        <p><%= recommendation.username %></p>
-        <p><%= link_to 'Edit', edit_recommendation_path(recommendation) if logged_in?(:site_admin) %></p>
-        <p><%= link_to 'Delete', recommendation, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></p>
+<div class = "container">
+  <div class="card  text-left">
+    <div class = card-header>
+      <h4 class="card-title"><%= link_to recommendation.title, recommendation_path(recommendation) %></h4>
+      <h6 class="card-subtitle mb-2 text-muted">By: <%= recommendation.author %></h6>
+    </div>
+    <div class="card-block">
+      <div class="card-text"> Pairings: </div>
+      <p class="card-text">Summary: <%= recommendation.summary %></p>
+    </div>
+    <div class="card-footer text-muted">
+      <div class = "row">
+        <div class = "col-sm-2">
+          Rated:
+        </div>
+        <div class = "col-sm-2">
+          Language:
+        </div>
+        <div class = "col-sm-2">
+          Genre: <%= recommendation.genre %>
+        </div>
+        <div class = "col-sm-2">
+          Chapters:
+        </div>
+        <div class = "col-sm-2">
+          Words: <%= recommendation.length %>
+        </div>
+        <div class = "col-sm-2">
+          Completed: <%= recommendation.complete %>
+        </div>
+      <div class = "row">
+        <div class = "col-lg-12">
+          <p>Recommended by: <%= recommendation.username %></p>
+        </div>
+      </div>
+    </div>
+      <p><%= link_to 'Edit', edit_recommendation_path(recommendation) if logged_in?(:site_admin) %></p>
+     <p> <%= link_to 'Delete', recommendation, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></p>
+    </div>
+  </div>
 </div>
+    <td><%= link_to 'Edit', edit_recommendation_path(recommendation) if logged_in?(:site_admin) %></p>
+    <td><%= link_to 'Delete', recommendation, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>

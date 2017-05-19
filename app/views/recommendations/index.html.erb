@@ -2,23 +2,6 @@
 
 <h1>Recommendations</h1>
 
-<%= link_to 'New Recommendation', new_recommendation_path if logged_in?(:site_admin, :user) %>
-
-    <div>
-      <p>Title</p>
-      <p>Summary</p>
-      <p>Author</p>
-      <p>Genre</p>
-      <p>Length</p>
-      <p>Rating</p>
-      <p>Complete</p>
-      <p>Recommended by</p>
-    </div>
-
-<div>
   <%= render partial: @recommendations, spacer_template: 'recommendation_ruler' %>
-</div>
-
-<br>
 
 
