@@ -104,6 +104,7 @@ body {
 
 .mastfoot {
   color: rgba(255,255,255,.5);
+  margin-top: 20px;
 }
 
 
@@ -158,4 +159,19 @@ h1 {
 
 .nav{
   aligh: center;
+}
+
+.review-card > .card {
+  margin-top: 15px;
+}
+
+.review-attribution,
+.card-footer {
+  font-size: .8em;
+  font-style: italic;
+}
+
+.reviewer-name,
+.recommender-name {
+  font-weight:700;
 }

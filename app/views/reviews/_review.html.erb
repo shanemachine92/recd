@@ -1,16 +1,19 @@
- <div class = "review-card">
-    <div class = "card">
-      <div class = "card-block">
-        <div class = "row">
-          <div class = "col-md-1">
-
-          </div>
-          </div>
-
-          <div class = "col-md-11">
-            <%= review.body %>
+ <div class = "container w-75">
+   <div class = "review-card">
+      <div class = "card">
+        <div class = "card-block">
+          <div class = "row">
+            <div class = "col-md-1">
+              <%= gravatar_helper review.user %>
+            </div>
+             <div class = "col-md-11">
+              <%= review.body %>
+            </div>
+            <div class = "review-attribution">
+            Review by <span class = "reviewer-name"> <%= review.user.name %> </span> | <%= distance_of_time_in_words(review.created_at, Time.now) %> ago
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+</div>
