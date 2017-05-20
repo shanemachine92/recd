@@ -1,6 +1,4 @@
-<div class = "container w-55">
-  <div class="card">
-    <div class="card-block">
+    <div class="form-group card container card-block">
       <%= form_for @recommendation do |form| %>
         <div class="form-group">
           <%= form.label :title %>
@@ -17,32 +15,28 @@
           <%= form.text_field :author, id: :recommendation_author, class: "form-control" %>
         </div>
 
-         <div class="form-group">
+        <div class="form-group">
           <%= form.label :pairings %>
           <%= form.text_area :pairings, id: :recommendation_pairings, class: "form-control" %>
         </div>
-
 
         <div class="form-group">
           <%= form.label :summary %>
           <%= form.text_area :summary, id: :recommendation_summary, class: "form-control" %>
         </div>
 
-        <div class= "form-group">
-          <%= form.label :rated %>
-          <select class="form-control">
-           <option selected></option>
-           <option>K</option>
-           <option>K+</option>
-           <option>T</option>
-           <option>M</option>
-           <option>MA</option>
-         </select>
-       </div>
+        <%= form.label :rated %>
+        <select class = "form-group custom-select" id="recommendation_genre" name = "recommendation[rated]">
+         <option selected></option>
+         <option>K</option>
+         <option>K+</option>
+         <option>T</option>
+         <option>M</option>
+         <option>MA</option>
+        </select>
 
-       <div class= "form-group">
         <%= form.label :language %>
-        <select class="form-control">
+        <select class = "custom-select form-group" id="recommendation_language" name = "recommendation[language]">
           <option selected></option>
           <option>Deutsch</option>
           <option>English</option>
@@ -50,34 +44,31 @@
           <option>Italiano</option>
           <option>Português</option>
         </select>
-        </div>
 
-        <div class= "form-group">
-          <%= form.label :genre %>
-          <select class="form-control">
-            <option></option>
-            <option>Adventure</option>
-            <option>Angst</option>
-            <option>Crime</option>
-            <option>Drama</option>
-            <option>Family</option>
-            <option>Fantasy</option>
-            <option>General</option>
-            <option>Horror</option>
-            <option>Humor</option>
-            <option>Hurt/Comfort</option>
-            <option>Mystery</option>
-            <option>Parody</option>
-            <option>Poetry</option>
-            <option>Romance</option>
-            <option>Sci-Fi</option>
-            <option>Spiritual</option>
-            <option>Supernatural</option>
-            <option>Suspence</option>
-            <option>Tragedy</option>
-            <option>Western</option>
-          </select>
-        </div>
+        <%= form.label :genre %>
+        <select class = "custom-select form-group" id="recommendation_genre" name = "recommendation[genre]">
+          <option></option>
+          <option>Adventure</option>
+          <option>Angst</option>
+          <option>Crime</option>
+          <option>Drama</option>
+          <option>Family</option>
+          <option>Fantasy</option>
+          <option>General</option>
+          <option>Horror</option>
+          <option>Humor</option>
+          <option>Hurt/Comfort</option>
+          <option>Mystery</option>
+          <option>Parody</option>
+          <option>Poetry</option>
+          <option>Romance</option>
+          <option>Sci-Fi</option>
+          <option>Spiritual</option>
+          <option>Supernatural</option>
+          <option>Suspence</option>
+          <option>Tragedy</option>
+          <option>Western</option>
+        </select>
 
         <div class="form-group">
           <%= form.label :chapters %>
@@ -99,5 +90,3 @@
         </div>
       <% end %>
     </div> 
-  </div>
-</div> 
