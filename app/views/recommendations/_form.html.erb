@@ -1,4 +1,4 @@
-<div class = "container">
+<div class = "container w-55">
   <div class="card">
     <div class="card-block">
       <%= form_for @recommendation do |form| %>
@@ -28,9 +28,9 @@
           <%= form.text_area :summary, id: :recommendation_summary, class: "form-control" %>
         </div>
 
-        <div class= "form-group ">
+        <div class= "form-group">
           <%= form.label :rated %>
-          <select class="custom-select">
+          <select class="form-control">
            <option selected></option>
            <option>K</option>
            <option>K+</option>
@@ -40,9 +40,9 @@
          </select>
        </div>
 
-       <div class= "form-group ">
+       <div class= "form-group">
         <%= form.label :language %>
-        <select class="custom-select">
+        <select class="form-control">
           <option selected></option>
           <option>Deutsch</option>
           <option>English</option>
@@ -54,7 +54,7 @@
 
         <div class= "form-group">
           <%= form.label :genre %>
-          <select class="custom-select">
+          <select class="form-control">
             <option></option>
             <option>Adventure</option>
             <option>Angst</option>
@@ -81,12 +81,12 @@
 
         <div class="form-group">
           <%= form.label :chapters %>
-          <%= form.number_field :chapters, id: :recommendation_chapters %>
+          <%= form.number_field :chapters, id: :recommendation_chapters, class: "form-control" %>
         </div>
 
         <div class="form-group">
           <%= form.label :words %>
-          <%= form.number_field :words, id: :recommendation_words %>
+          <%= form.number_field :words, id: :recommendation_words, class: "form-control" %>
         </div>
 
         <div class="form-group">

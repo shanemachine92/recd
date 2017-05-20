@@ -70,16 +70,17 @@ class RecommendationsController < ApplicationController
 
   def recommendation_params
     params.require(:recommendation).permit(:title,
+                                          :url,
+                                          :author,
+                                          :pairings,
                                           :summary, 
-                                          :author, 
+                                          :rated,
+                                          :language,
+                                          :genre,
+                                          :chapters,
+                                          :words,
                                           :genre, 
-                                          :length, 
-                                          :rating, 
                                           :complete, 
-                                          :recommender_review, 
-                                          :fandom, 
-                                          :fandom_id, 
-                                          fandoms_attributes: [:name]
                                           )
   end
 end
