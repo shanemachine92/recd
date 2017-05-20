@@ -9,7 +9,7 @@
              <div class = "col-md-11">
               <%= review.body %>
             </div>
-            <div class = "review-attribution">
+            <div class = "review-attribution col-12">
             Review by <span class = "reviewer-name"> <%= review.user.name %> </span> | <%= distance_of_time_in_words(review.created_at, Time.now) %> ago
             </div>
           </div>

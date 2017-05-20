@@ -1,7 +1,7 @@
 <% unless current_user.is_a? GuestUser %>
   <%= form_for @review, url: '#' do |form| %>
-    <div class="form-group container w-75">
-      <%= form.label :'Leave A Review' %>
+    <div class="form-group container w-75 review">
+      <%= form.label :'Leave A Review', class: "leave-a-review" %>
       <%= form.text_area :body, class: 'form-control' %>
     </div>
 
