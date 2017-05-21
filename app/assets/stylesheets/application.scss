@@ -27,8 +27,8 @@ a:hover {
 
 html,
 body {
-  height: 100%;
   background-image: image-url('wg_aged_surface_texture_4.jpg'); // link to /assets/images/wg_aged_surface_texture_4.jpg
+  height: 100%;
 }
 body {
   color: #fff;
@@ -182,3 +182,12 @@ body {
   float: none;
 }
 
+<<<<<<< HEAD
+=======
+.timeline-Widget {
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 4px;
+    float: right;
+}
+>>>>>>> api

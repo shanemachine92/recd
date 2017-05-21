@@ -6,11 +6,11 @@
             <div class = "col-md-1">
               <%= gravatar_helper review.user %>
             </div>
-             <div class = "col-md-11">
+            <div class = "col-md-11">
               <%= review.body %>
             </div>
-            <div class = "review-attribution col-12">
-            Review by <span class = "reviewer-name"> <%= review.user.name %> </span> | <%= distance_of_time_in_words(review.created_at, Time.now) %> ago
+            <div class = "review-attribution col -12">
+              Reviewed by <span class = "reviewer-name"> <%= review.user.name %> </span> | <%= distance_of_time_in_words(review.created_at, Time.now) %> ago
             </div>
           </div>
         </div>
