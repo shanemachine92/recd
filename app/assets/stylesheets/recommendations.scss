@@ -9,16 +9,14 @@ a {
 }
 
 /* Custom default button */
+.btn-primary,
+.btn-primary:hover,
+.btn-secondary:focus,
 .btn-secondary,
-.btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
+  color: #fff;
   background-color: #000;
   border: .05rem solid #fff;
-}
-
-.btn-secondary > a {
-  color: #fff;
 }
 
 /*
@@ -200,7 +198,7 @@ h2 {
 }
 
 .nav-links{
-  color: #000;
+  color: #fff;
 }
 
 .btn-primary{
@@ -226,7 +224,7 @@ h2 {
   color: black;
 }
 
-.new_recommendation{
+.new-recommendation{
   padding: 25px;
 }
 

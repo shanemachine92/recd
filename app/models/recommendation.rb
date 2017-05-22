@@ -8,8 +8,10 @@ class Recommendation < ApplicationRecord
 
   validates_presence_of :title, :summary
 
-  def self.fantasy
-    where(genre: "fantasy")
+  def self.search(search)
+    where("title LIKE ? OR by LIKE ? OR pairings LIKE ? OR summary LIKE? OR rated LIKE ? 
+      OR language LIKE ? OR genre LIKE ?", 
+      "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%") 
   end
 
   scope :completed_fic, -> {where(complete: true)}
