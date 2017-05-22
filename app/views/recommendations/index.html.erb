@@ -7,11 +7,30 @@
   <div class = "col-9">
   <%= render partial: @recommendations %>
   </div>
+
   <div class = "col-3">
     <a class="twitter-timeline" data-height="600" data-theme="light" href="https://twitter.com/davidgaider">Tweets by davidgaider</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </div>
 
+<!-- <nav aria-label="Page navigation" items-per-page="10" >
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav> -->
 
-
-
+<%= will_paginate @recommendations %>
