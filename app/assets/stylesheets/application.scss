@@ -150,7 +150,7 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 55rem;
+    width: 65rem;
   }
 }
 
@@ -181,3 +181,18 @@ body {
     border-radius: 4px;
     float: right;
 }
+
+.da-news{
+  color: black;
+  margin: 20px;
+}
+
+.da-news a{
+  color: #333;
+}
+
+.da-news > .card{
+  padding: 15px;
+}
+
+
