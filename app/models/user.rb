@@ -14,6 +14,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :recommendations, dependent: :destroy
+
   has_many :reviews, dependent: :destroy
 
   validates_presence_of :name
@@ -25,5 +26,4 @@ class User < ApplicationRecord
   def last_name
     self.name.split.last
   end
-  
 end
