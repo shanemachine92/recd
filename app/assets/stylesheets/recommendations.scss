@@ -1,4 +1,5 @@
 @import 'bootstrap';
+@import 'gritter';
 
 /* Globals */
 
@@ -281,3 +282,14 @@ h2 {
 .pagination .next_page {
     margin-left: 1em; 
 }
+
+.required label {
+    font-weight: bold;
+}
+
+.required label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+

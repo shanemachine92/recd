@@ -68,7 +68,8 @@ class RecommendationsController < ApplicationController
   end
 
   def recommendation_params
-    params.require(:recommendation).permit(:title,
+    params.require(:recommendation).permit(
+                                          :title,
                                           :url,
                                           :author,
                                           :pairings,

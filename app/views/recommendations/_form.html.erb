@@ -1,97 +1,57 @@
 <div class="form-group card container card-block form-horizontal">
   <%= form_for @recommendation do |form| %>
-    <div class="form-group">
-      <%= form.label :recommended_by %>
-      <%= form.text_field :recommended_by, id: :recommendation_recommended_by, class: "form-control" %>
-    </div>
 
-    <div class="form-group">
+    <div class="form-group required">
       <%= form.label :title %>
-      <%= form.text_field :title, id: :recommendation_title, class: "form-control" %>
+      <%= form.text_field :title, id: :recommendation_title, class: "form-control", required: true %>
     </div>
 
-    <div class="form-group">
+    <div class="form-group required">
       <%= form.label :Url %>
-      <%= form.text_field :url, id: :recommendation_url, class: "form-control" %>
+      <%= form.text_field :url, id: :recommendation_url, class: "form-control", required: true %>
     </div>
 
-    <div class="form-group">
+    <div class="form-group required">
       <%= form.label :author %>
-      <%= form.text_field :author, id: :recommendation_author, class: "form-control" %>
+      <%= form.text_field :author, id: :recommendation_author, class: "form-control", required: true %>
     </div>
 
-    <div class="form-group">
+    <div class="form-group required">
       <%= form.label :pairings %>
-      <%= form.text_field :pairings, id: :recommendation_pairings, class: "form-control" %>
+      <%= form.text_field :pairings, id: :recommendation_pairings, class: "form-control", required: true %>
     </div>
 
-    <div class="form-group">
+    <div class="form-group required">
       <%= form.label :summary %>
-      <%= form.text_area :summary, id: :recommendation_summary, class: "form-control" %>
+      <%= form.text_area :summary, id: :recommendation_summary, class: "form-control", required: true %>
     </div>
 
     <div class = "row">
-      <div class = "col">
+      <div class = "col required">
         <%= form.label :rated %>
-        <select class = "form-group custom-select" id="recommendation_rated" name = "recommendation[rated]">
-         <option selected></option>
-         <option>K</option>
-         <option>K+</option>
-         <option>T</option>
-         <option>M</option>
-         <option>MA</option>
-        </select>
+        <%= form.select :rated, options_for_rated, id: :recommendation_rated, class: "form-control", required: true %>
       </div>
 
-      <div class = "col">
+      <div class = "col required">
         <%= form.label :language %>
-        <select class = "custom-select form-group" id="recommendation_language" name = "recommendation[language]">
-          <option selected></option>
-          <option>Deutsch</option>
-          <option>English</option>
-          <option>Español</option>
-          <option>Italiano</option>
-          <option>Português</option>
-        </select>
+        <%= form.select :language, options_for_language, id: :recommendation_language, class: "form-control", required: true %>
       </div>
 
-      <div class = "col">
+      <div class = "col required">
         <%= form.label :genre %>
-        <select class = "custom-select form-group" id="recommendation_genre" name = "recommendation[genre]">
-          <option></option>
-          <option>Adventure</option>
-          <option>Angst</option>
-          <option>Crime</option>
-          <option>Drama</option>
-          <option>Family</option>
-          <option>Fantasy</option>
-          <option>General</option>
-          <option>Horror</option>
-          <option>Humor</option>
-          <option>Hurt/Comfort</option>
-          <option>Mystery</option>
-          <option>Parody</option>
-          <option>Poetry</option>
-          <option>Romance</option>
-          <option>Sci-Fi</option>
-          <option>Spiritual</option>
-          <option>Supernatural</option>
-          <option>Suspence</option>
-          <option>Tragedy</option>
-          <option>Western</option>
-        </select>
+        <%= form.select :genre, options_for_genre, id: :recommendation_genre, class: "form-control", required: true %>
       </div>
     </div>
     
     <div class = "row">
-      <div class="form-group col">
+      <div class="form-group required col">
         <%= form.label :chapters %>
-        <%= form.number_field :chapters, id: :recommendation_chapters %>
+        <%= form.number_field :chapters, id: :recommendation_chapters, required: true %>
       </div>
 
-      <div class="form-group col">
+      <div class="form-group required col">
         <%= form.label :words %>
-        <%= form.number_field :words, id: :recommendation_words %>
+        <%= form.number_field :words, id: :recommendation_words, required: true %>
       </div>
 
        <div class="form-group col">
