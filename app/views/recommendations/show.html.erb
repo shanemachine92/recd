@@ -6,9 +6,9 @@
 <% end %> 
   
 <div>
-<%= link_to 'Edit', edit_recommendation_path(@recommendation) if logged_in?(:site_admin) %> 
-<%= link_to 'Back', recommendations_path%>
-<%= link_to 'Delete', recommendation_url, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
+  <%= link_to 'Edit | ', edit_recommendation_path(@recommendation) if logged_in?(:site_admin) %> 
+  <%= link_to 'Back', recommendations_path%>
+  <%= link_to ' | Delete', recommendation_url, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
 </div>
 
 <%= render 'reviews/review_form' %>
@@ -16,6 +16,5 @@
 <h2> Reviews for <%= @recommendation.title %> </h2>
 
 <div id = "reviews" data-recommendation-id= "<%=@recommendation.id%>" >
-<%= render @recommendation.reviews %>
-</div>
+  <%= render @recommendation.reviews %>
 </div>
