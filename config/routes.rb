@@ -3,10 +3,11 @@ Rails.application.routes.draw do
 
   resources :recommendations
 
-  get 'Buffy-fics', to: 'fandoms#show'
-
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+  get 'fics', to: 'pages#fics'
+  get 'da_news', to: 'pages#da_news'
+  get 'faqs', to: 'pages#faqs'
 
   mount ActionCable.server => '/cable'
 
