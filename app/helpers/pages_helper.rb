@@ -1,5 +1,5 @@
 module PagesHelper
-  def twitter_parser tweet
+  def twitter_parser (tweet)
     regex = %r{
       \b
       (

@@ -96,7 +96,7 @@ body {
 /* Footer */
 
 .mastfoot {
-  color: rgba(0, 0, 0,.5);
+  color: #fff;
   margin-top: 20px;
 }
 
@@ -110,11 +110,6 @@ body {
 
   .mastfoot {
     bottom: 0;
-  }
-
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
   }
 
   /* Handle the widths */
@@ -201,7 +196,6 @@ h2 {
   font-size: 15px;
 }
 
-
 .card-header {
   background-color: transparent; 
   border: none;
@@ -233,7 +227,6 @@ h2 {
     border-radius: 4px;
     float: right;
 }
-
 
 .pagination {
   text-align: center;
