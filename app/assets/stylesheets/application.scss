@@ -184,21 +184,17 @@ body {
     float: right;
 }
 
-.da-news{
+.da-news {
   color: black;
   margin: 20px;
 }
 
-.da-news a{
+.da-news a {
   color: #333;
 }
 
-.da-news > .card{
+.da-news > .card {
   padding: 15px;
-}
-
-h1{
-  
 }
 
 .faqs {
@@ -215,15 +211,19 @@ h1{
   text-align: left;
 }
 
-.nav-links{
+.nav-links {
   color: #fff;
   background: none;
   border: none;
   font-weight: bold;
   margin-left: 1rem;
-  border-bottom-color: rgba(255,255,255,.25);
   background-color: transparent;
   padding: .25rem 0;
+}
+
+.nav-links:hover,
+.nav-links:focus {
+  border-bottom-color: rgba(255,255,255,.25);
 }
 
 
