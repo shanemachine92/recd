@@ -1,0 +1,13 @@
+As a user, I can upload recommendations
+
+As a user, I can recommend specific fics to specifc users
+
+As a user, I can sort and search fics
+
+As a user, I can drop in a link to a fic and the 'new recommendations' form pulls in data and maps to the corresponding fields
+
+As an admin, I can create new pages as new fandoms are added to the archive
+
+As a user, Rec'd has a recommendation engine component that suggests fics for me
+
+As a user, I can favorite the best of the best from Rec'd
