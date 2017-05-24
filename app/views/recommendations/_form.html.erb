@@ -2,7 +2,7 @@
   <%= form_for @recommendation do |form| %>
     <% if @recommendation.errors.any? %>
       <% @recommendation.errors.full_messages.each do |error| %>
-    <%= js add_gritter(flash[:error], title:"Rec'd", sticky: false) %>
+    <%= alert_generator error %>
   <% end %>
 <% end %>
 
