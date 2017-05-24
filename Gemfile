@@ -55,3 +55,5 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 gem 'capybara', '~> 2.14'
 gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
 gem 'gritter', '~> 1.2'
+
+ruby "2.4.0"
