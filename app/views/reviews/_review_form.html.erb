@@ -1,5 +1,11 @@
 <% unless current_user.is_a? GuestUser %>
   <%= form_for @review, url: '#' do |form| %>
+    <% if @review.errors.any? %>
+      <% @review.errors.full_messages.each do |error| %>
+        <%= js add_gritter(flash[:error], title:"Rec'd", sticky: false) %>
+      <% end %>
+    <% end %>
+    
     <div class="form-group container w-75 review">
       <%= form.label :'Leave A Review', class: "leave-a-review" %>
       <%= form.text_area :body, class: 'form-control' %>
