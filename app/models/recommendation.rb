@@ -7,4 +7,8 @@ class Recommendation < ApplicationRecord
   # belongs_to :user
 
   validates_presence_of :title, :summary
+
+  def self.recent 
+    order("created_at DESC")
+  end
 end

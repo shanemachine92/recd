@@ -7,8 +7,8 @@ class RecommendationsController < ApplicationController
   # GET /recommendations
   def index
     @page_title = "All Recommended Fics| Curated Fanfiction"
-    @recommendations = Recommendation.all
-    @recs_paginate = Recommendation.paginate(page: params[:page], :per_page => 10)
+    @recommendations = Recommendation.recent.all
+    @recs_paginate = Recommendation.recent.paginate(page: params[:page], :per_page => 10)
   end
 
   # GET /recommendations/1
