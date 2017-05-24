@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170517222225) do
+ActiveRecord::Schema.define(version: 20170524145154) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,12 +25,6 @@ ActiveRecord::Schema.define(version: 20170517222225) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
-  end
-
-  create_table "genres", force: :cascade do |t|
-    t.string "name"
-    t.bigint "recommendation_id"
-    t.index ["recommendation_id"], name: "index_genres_on_recommendation_id"
   end
 
   create_table "recommendations", force: :cascade do |t|
@@ -77,15 +71,14 @@ ActiveRecord::Schema.define(version: 20170517222225) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.string "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string "roles"
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "genres", "recommendations"
   add_foreign_key "reviews", "recommendations"
   add_foreign_key "reviews", "users"
 end
