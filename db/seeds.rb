@@ -1,20 +1,20 @@
-User.create!(
-  name: "Shane Zackery",
-  email: "shane@recd.com",
-  password: "password",
-  roles: "site_admin"
-)
+# User.create!(
+#   name: "Shane Zackery",
+#   email: "shane@recd.com",
+#   password: "password",
+#   roles: "site_admin"
+# )
 
-puts "1 Admin created"
+# puts "1 Admin created"
 
-User.create!(
-  name: "Johnny Appleseed",
-  email: "johnny@recd.com",
-  password: "password",
-  roles: "user"
-)
+# User.create!(
+#   name: "Johnny Appleseed",
+#   email: "johnny@recd.com",
+#   password: "password",
+#   roles: "user"
+# )
 
-puts "1 User created"
+# puts "1 User created"
 
 Recommendation.create!(
   title: "The Falling Leviathan",
