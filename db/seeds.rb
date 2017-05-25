@@ -1,21 +1,3 @@
-# User.create!(
-#   name: "Shane Zackery",
-#   email: "shane@recd.com",
-#   password: "password",
-#   roles: "site_admin"
-# )
-
-# puts "1 Admin created"
-
-# User.create!(
-#   name: "Johnny Appleseed",
-#   email: "johnny@recd.com",
-#   password: "password",
-#   roles: "user"
-# )
-
-# puts "1 User created"
-
 Recommendation.create!(
   title: "The Falling Leviathan",
   url: "https://www.fanfiction.net/s/12209953/1/The-Falling-Leviathan",
@@ -303,5 +285,3 @@ Recommendation.create!(title: "Ostagar, ultima esperanza",
 )
 
 puts "20 recs created"
-
-

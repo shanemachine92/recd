@@ -1,3 +1,5 @@
+# removes periods or other non-link related characters from the end of links so that they are clickable when rendered
+
 module PagesHelper
   def twitter_parser (tweet)
     regex = %r{
@@ -23,6 +25,3 @@ module PagesHelper
     end.html_safe
   end
 end
-
-
-# "wnfamousartists: RT @worldnewsdotcom: Writing the next Dragon Age #DragonAge4 #DA4 #Bioware #gamedev <a href='https://t.co/KMw4c1P0uM' target='_blank'>https://t.co/KMw4c1P0uM</a> <a href='https://t.co/sOQ6y6h4Y8' target='_blank'>https://t.co/sOQ6y6h4Y8</a>" 
