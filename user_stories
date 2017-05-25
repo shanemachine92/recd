@@ -1,13 +1,7 @@
-As a user, I can upload recommendations
+As a user, I can upload recommendations and recommend specific fics to specifc users. I can favorite the best of the best from Rec'd and I can sort and search fics.
 
-As a user, I can recommend specific fics to specifc users
+I can drop in a link to a fic and the 'new recommendations' form pulls in data and maps to the corresponding fields via api.
 
-As a user, I can sort and search fics
+As a user, Rec'd has a recommendation engine component that suggests fics for me.
 
-As a user, I can drop in a link to a fic and the 'new recommendations' form pulls in data and maps to the corresponding fields
-
-As an admin, I can create new pages as new fandoms are added to the archive
-
-As a user, Rec'd has a recommendation engine component that suggests fics for me
-
-As a user, I can favorite the best of the best from Rec'd
+As an admin, I can create new pages as new fandoms are added to the archive. All admin functions are controlled by a dashoboard.
