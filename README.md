@@ -12,32 +12,38 @@ App curators can add new fic recommendations to the site and users can link out 
 
 Download or clone repo
 
-```git clone git@github.com:shanemachine92/recd.git
+```js
+git clone git@github.com:shanemachine92/recd.git
 ```
 
 Run with Ruby 2.4.0
 
-```rvm use 2.4.0
+```js
+rvm use 2.4.0
 ```
 
 Install dependencies
 
-```bundle install
+```js
+bundle install
 ```
 
 Start local server
 
-```rails s
+```js
+rails s
 ```
 
 In your browser, navigate to
-```localhost:3000
+```js
+localhost:3000
 ```
 
 ## Testing
 
 The testing framework is RSpec. Run the following code in your terminal:
-```rspec
+```js
+rspec
 ```
 
 ## Framework
